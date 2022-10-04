@@ -51,3 +51,7 @@ form button {
     border: none;
     border-radius: 5px;
 }
+
+form a {
+    color: rgb(82, 112, 209);
+}
