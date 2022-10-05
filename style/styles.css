@@ -1,96 +1,99 @@
+@import url(./variables.css);/* Importa as variáveis do arquivo variables.css */ 
+@import url(./header.css); /* Importa os estilos para o Header */
+@import url(./footer.css); /* Importa os estilos para o Footer */
+@import url(./loginForm.css); /* Importa os estilos para o Formulario de Login */
+
 * {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body,html {
-    background-color:#77c286;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-h1 {
-    color: rgb(0, 0, 0);  
+main {
+    background-color: var(--main_color);
+    color: var(--white);
+    height: 70vh;
+    padding: 20px;
 }
 
-p{
-    color: rgb(0, 0, 0);
-}
-
-a, a:hover, a:visited {
-    color: unset;
-    text-decoration: none;
-}
-
-.ifpe-logo-container{
-    background-color:white;
+.container {
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.ifpe-logo-container img{
-    width: 200px;
-    height: 200px;
-}
-
-.ifpe-logo-container a{
-    font-weight: 300;
-}
-
-.container{
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
+}
+
+.userButtons {
+    border-bottom: 1px solid var(--white);
+    max-width: 1200px;
+    margin: 20px auto;
+    padding-bottom: 30px;
+    display: flex;
     align-items: center;
-
+    justify-content: center;
 }
 
-.form {
-    border: 10px outset #529d54; /*borda*/
-    border-radius: 5px; /*contorno da borda*/
-    background-color: #529d54; /*fundo da classe selecionada*/
-    width: 16rem; /*Largura da borda*/
-    padding: 30px; /**/
-    display: grid;
-    grid-template: 1fr 1fr 1fr / 1fr;
-    gap: 20px;
-    color: azure;
-    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.278);
-}
-
-.form > a{
-    color: aliceblue;
-    font-size: small;
+.userButton {
+    cursor: pointer;
+    background-color: var(--white);
+    color: var(--dark_color);
+    text-decoration: none;
+    width: 15vw;
+    min-width: 200px;
+    height: 10rem;
+    border: 1px solid var(--gray);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 20px;
     transition: 0.2s;
 }
 
-.form > button{
-    width: 75px;
-    transition: 0.2s;
-    border: 0px;
-    border-radius: 5px;
-
+.userButton > img {
+    height: 3rem;
 }
 
-.form > input{
-    height: 30px;
-    border-radius: 5px;
-    border: 0px;
-    text-indent: 10px;
+.userButton > h3 {
+    font-size: 1.5rem;
 }
 
-.form > a:hover{
+.userButton:hover {
+    box-shadow: 0 3px 4px rgba(98, 98, 98, 0.437);
     transform: scale(1.1);
-
 }
 
-.form > button:hover{ /*Quando o mouse passar por cima oq está dentro da chave será aplicado  */
-    border: 0ch;
-    transform:scale(1.1);
+.userButton > img {
+    width: 3rem;
 }
 
-footer{
-    font-size: small;
+@media only screen and (max-width: 780px) {
+
+    .container {
+        height: auto;
+        display: block;
+    }
+
+    .userButtons {
+        flex-direction: column;
+    }
+
+    .userButton {
+        text-align: center;
+        width: 100%;
+        height: 100px;
+        margin: 10px 0;
+    }
+
+    .userButton > img {
+        height: 2rem;
+    }
+
+    .userButton:hover {
+        box-shadow: 0 3px 4px rgba(98, 98, 98, 0.437);
+        transform: scale(1.020);
+    }
 }
