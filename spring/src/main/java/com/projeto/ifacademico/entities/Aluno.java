@@ -1,6 +1,5 @@
 package com.projeto.ifacademico.entities;
 
-import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,8 +19,8 @@ public class Aluno {
 	private String matricula;
 	private String nome;
 	private String sexo;
-	private String dataNasc;
-	private String numeroCelular;
+	private String datanasc;
+	private String numerocelular;
 	private String email;
 	
 
@@ -49,16 +48,16 @@ public class Aluno {
 		this.sexo = sexo;
 	}
 	public String getDataNasc() {
-		return dataNasc;
+		return datanasc;
 	}
 	public void setDataNasc(String dataNasc) {
-		this.dataNasc = dataNasc;
+		this.datanasc = dataNasc;
 	}
 	public String getNumeroCelular() {
-		return numeroCelular;
+		return numerocelular;
 	}
 	public void setNumeroCelular(String numeroCelular) {
-		this.numeroCelular = numeroCelular;
+		this.numerocelular = numeroCelular;
 	}
 	public String getEmail() {
 		return email;
@@ -66,6 +65,19 @@ public class Aluno {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	public String getMatricula() {
+		return matricula;
+	}
+	public void setMatricula(String matricula) {
+		this.matricula = matricula;
+	}
+	public Curso getCurso() {
+		return curso;
+	}
+	public void setCurso(Curso curso) {
+		this.curso = curso;
+	}
+	
 
 	
 	

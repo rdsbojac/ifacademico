@@ -3,6 +3,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -20,8 +22,16 @@ public class Professor {
 	private String numeroCelular;
 	private String email;
 	
+	@OneToOne
+	@JoinColumn(name = "idcurso")
+	private Curso curso;
+	
+	
 	
 	public Professor() {}
+	
+	
+	/*GETTERS ANDS SETTERS*/
 
 	public long getId() {
 		return idProfessor;
@@ -79,6 +89,15 @@ public class Professor {
 		this.email = email;
 	}
 
+	public Curso getCurso() {
+		return curso;
+	}
+
+	public void setCurso(Curso curso) {
+		this.curso = curso;
+	}
+	
+	/*GETTERS ANDS SETTERS*/
 
 	
 }

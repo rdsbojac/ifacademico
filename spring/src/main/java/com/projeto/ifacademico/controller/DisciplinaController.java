@@ -3,6 +3,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.projeto.ifacademico.entities.Disciplina;
@@ -19,8 +20,12 @@ public class DisciplinaController {
 	public List<Disciplina>findAll(){ /*Metodo que retorna todas as disciplinas cadastradas */
 		List<Disciplina> resultado = disciplinaRepository.findAll();
 		return resultado;
-		  
 	}
 	
+	@GetMapping("/{periodo}")
+	public List<Disciplina> findByPeriodo(@PathVariable int periodo){
+		List<Disciplina> resultado = disciplinaRepository.findByPeriodo(periodo);
+		return resultado;
+	}
 
 }
