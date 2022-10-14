@@ -24,12 +24,13 @@ public class CursoController {
 		List<Curso> resultado = cursoRepository.findAll();
 		return resultado;
 	}
-	
+	/*Metodo deve mostrar quando passado o id do curso todas as disciplinas deste curso*/
 	@GetMapping(value = "/{id}")/*Indicação do caminho /Curso/id*/
 	public Curso findById(@PathVariable Long id){ /*Annotation que indica que o id passado no getMapping é o argumento desse metodo*/
 		Curso resultado = cursoRepository.findById(id).get();
 		return resultado;
 	}
+	
 	
 
 }

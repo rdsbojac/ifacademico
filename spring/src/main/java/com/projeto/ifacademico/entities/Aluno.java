@@ -1,4 +1,4 @@
-package com.projeto.ifacademico.entities;
+	package com.projeto.ifacademico.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

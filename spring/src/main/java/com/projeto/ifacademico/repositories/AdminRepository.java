@@ -1,5 +1,9 @@
 package com.projeto.ifacademico.repositories;
 
-public class AdminRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.projeto.ifacademico.entities.Admin;
+
+public interface AdminRepository extends JpaRepository<Admin, Long>{
 
 }

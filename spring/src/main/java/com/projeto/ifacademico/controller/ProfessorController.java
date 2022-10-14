@@ -5,8 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.projeto.ifacademico.entities.Professor;
@@ -31,10 +29,6 @@ public class ProfessorController {
 		return resultado;
 	}
 	
-	@PostMapping /*Requisição do tipo POST*/
-	public Professor insert(@RequestBody Professor professor) { /*Metodo envia o corpo do objeto */
-		Professor resultado = professorRepository.save(professor);
-		return resultado;
-	}
+	
 	
 }

@@ -1,10 +1,11 @@
 package com.projeto.ifacademico.entities;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.ManyToOne;	
 import javax.persistence.Table;
 
 @Entity
@@ -17,6 +18,7 @@ public class Disciplina {
 	private String nome;
 	private int codhorario;
 	private int periodo;
+
 	
 	@ManyToOne
 	@JoinColumn(name = "idcurso")

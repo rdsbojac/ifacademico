@@ -25,6 +25,8 @@ INSERT INTO tb_disciplina(idcurso,nome,codhorario,periodo) VALUES (2,'gestao amb
 INSERT INTO tb_disciplina(idcurso,nome,codhorario,periodo) VALUES (3,'administracao',3,3);
 INSERT INTO tb_disciplina(idcurso,nome,codhorario,periodo) VALUES (4,'introdução a segurança',4,3);
 
+INSERT INTO tb_admin(nome) VALUES ('admin');
+INSERT INTO tb_secretaria(nome) VALUES ('Neuza');
 
 
 

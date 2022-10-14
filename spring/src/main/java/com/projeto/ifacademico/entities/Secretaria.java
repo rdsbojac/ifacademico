@@ -1,34 +1,31 @@
 package com.projeto.ifacademico.entities;
 
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
 @Entity
-@Table(name="tb_curso")
-public class Curso {
-	
+@Table(name = "tb_secretaria") /*Esta entidade apenas cadastra alunos e professores*/
+public class Secretaria {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long idCurso;
+	private Long id;
+	
 	private String nome;
-	private String descricao;
+
+	public Secretaria() {}
 	
-	
-	public Curso() {
-	}
-		
-	public Long getIdCurso() {
-		return idCurso;
+	public Long getId() {
+		return id;
 	}
 
-	public void setIdCurso(Long idCurso) {
-		this.idCurso = idCurso;
+	public void setId(Long id) {
+		this.id = id;
 	}
-	
 
 	public String getNome() {
 		return nome;
@@ -37,14 +34,7 @@ public class Curso {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-
-	public String getDescricao() {
-		return descricao;
-	}
-
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
-	}
+	
+	
 	
 }
-

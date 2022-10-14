@@ -27,8 +27,21 @@ public class AlunoController {
 	public Aluno findById(@PathVariable Long id) {
 		Aluno resultado = alunoRepository.findById(id).get();
 		return resultado;
-		
 	}
 	
+	@GetMapping(value = "/nome/{nome}")
+	public List<Aluno> findByNome(@PathVariable String nome) {
+		return alunoRepository.findByNome(nome);
+	}
+	
+	@GetMapping(value = "/matricula/{matricula}")
+	public List<Aluno> findByMatricula(@PathVariable String matricula) {
+		return alunoRepository.findByMatricula(matricula);
+	}
+	
+	@GetMapping(value = "/curso")
+	public Aluno findByCurso() {
+		return alunoRepository.findByCurso();
+	}
 
 }
