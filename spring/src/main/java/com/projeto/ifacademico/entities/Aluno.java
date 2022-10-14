@@ -28,7 +28,6 @@ public class Aluno {
 	@JoinColumn(name = "idcurso")
 	private Curso curso;
 	
-	
 	public long getId() {
 		return idAluno;
 	}
