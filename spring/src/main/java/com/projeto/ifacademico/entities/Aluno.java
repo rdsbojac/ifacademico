@@ -1,5 +1,7 @@
 	package com.projeto.ifacademico.entities;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,7 +13,8 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="tb_aluno")
-public class Aluno {
+public class Aluno implements Serializable{
+	private static final long serialVersionUID = 1L;
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)/*o identificador único será gerado pela coluna de auto incremento do banco de dados*/
@@ -22,7 +25,6 @@ public class Aluno {
 	private String datanasc;
 	private String numerocelular;
 	private String email;
-	
 
 	@OneToOne
 	@JoinColumn(name = "idcurso")

@@ -3,6 +3,7 @@ package com.projeto.ifacademico.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,9 +19,9 @@ public class AlunoController {
 	private AlunoRepository alunoRepository;
 	
 	@GetMapping
-	public List<Aluno>findAll(){
+	public ResponseEntity<List<Aluno>>findAll(){
 		List<Aluno> resultado = alunoRepository.findAll();
-		return resultado;
+		return ResponseEntity.ok(resultado);
 	}
 	
 	@GetMapping(value = "/{id}")

@@ -27,19 +27,10 @@ public class Professor {
 	private Curso curso;
 	
 	
-	
 	public Professor() {}
 	
 	
 	/*GETTERS ANDS SETTERS*/
-
-	public long getId() {
-		return idProfessor;
-	}
-
-	public void setId(long id) {
-		this.idProfessor = id;
-	}
 
 	public String getMatricula() {
 		return matricula;
@@ -96,8 +87,20 @@ public class Professor {
 	public void setCurso(Curso curso) {
 		this.curso = curso;
 	}
+
+
+
+	public long getIdProfessor() {
+		return idProfessor;
+	}
+
+
+	public void setIdProfessor(long idProfessor) {
+		this.idProfessor = idProfessor;
+	}
 	
 	/*GETTERS ANDS SETTERS*/
 
+	
 	
 }
