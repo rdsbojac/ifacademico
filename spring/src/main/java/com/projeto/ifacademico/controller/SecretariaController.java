@@ -1,12 +1,7 @@
 package com.projeto.ifacademico.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.projeto.ifacademico.entities.Aluno;
 import com.projeto.ifacademico.entities.Disciplina;
@@ -17,6 +12,8 @@ import com.projeto.ifacademico.repositories.ProfessorRepository;
 import com.projeto.ifacademico.repositories.SecretariaRepository;
 
 @RestController
+@CrossOrigin("http://127.0.0.1:5137") // Colocar URL usada pelo Front-end 5137 é a porta
+									// da extensão Live Server do VScode.
 @RequestMapping("/secretaria")
 public class SecretariaController {
 
